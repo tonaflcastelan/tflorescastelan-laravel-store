@@ -11,14 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::resource('products', 'Products\ProductController');
 
 Route::group(['namespace' => 'Products'], function() {
-    Route::get('products', 'ProductController@index')->name('products.index');
+    Route::get('/', 'ProductController@index')->name('products.index');
     Route::get('products/create', 'ProductController@create')->name('products.create');
     Route::post('products/store', 'ProductController@store')->name('products.store');
     Route::post('products/delete', 'ProductController@deleteProducts');
