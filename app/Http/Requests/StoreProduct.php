@@ -26,7 +26,7 @@ class StoreProduct extends FormRequest
         return [
             'name'              => 'required',
             'price'             => 'required|numeric',
-            'description'       => 'required|email',
+            'description'       => 'required',
             'category_id'       => 'required|not_in:0',
         ];
     }

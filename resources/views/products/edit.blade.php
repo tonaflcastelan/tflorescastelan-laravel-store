@@ -15,7 +15,7 @@
 				@endif
 				<div class="panel-heading">
 					Edit Product {{ $product->name}}
-					<a href="{{ url('/') }}" class="pull-right btn btn-sm btn-primary">
+					<a href="{{ url()->previous() }}" class="pull-right btn btn-sm btn-primary">
                         Back
                     </a>
 				</div>
